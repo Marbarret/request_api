@@ -11,8 +11,16 @@ class NetworkService {
         self.apiManager = apiManager
     }
     
-    func getRatedMovie() async throws -> [MovieModel] {
-        guard let url = URL(string: apiManager.baseUrl + apiManager.path) else {
+    func fetchData(page: Int) async throws -> [MovieModel] {
+        var urlComponents = URLComponents(string: apiManager.baseUrl + apiManager.path)!
+        
+        urlComponents.queryItems = [
+          URLQueryItem(name: "language", value: "en-US"),
+          URLQueryItem(name: "page", value: String(page)),
+          URLQueryItem(name: "sort_by", value: "created_at.asc"),
+        ]
+        
+        guard let url = urlComponents.url else {
             throw NetworkError.invalidURL
         }
         
@@ -27,7 +35,8 @@ class NetworkService {
         }
         
         let decoder = JSONDecoder()
-        return try decoder.decode([MovieModel].self, from: data)
+        let dataResult = try decoder.decode(ModelResponse.self, from: data)
+        return dataResult.results
     }
 }
 

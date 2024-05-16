@@ -12,9 +12,9 @@ struct RowRequest: View {
     
     var body: some View {
         VStack {
-            Text(movie.title ?? "")
+            Text(movie.title )
                 .font(.caption)
-            Text(movie.releaseDate ?? "")
+            Text(movie.releaseDate)
                 .font(.callout)
         }
     }

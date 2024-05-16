@@ -16,7 +16,7 @@ struct ContentView: View {
         }
         .onAppear {
             Task {
-                await viewModel.fetchMovies()
+                await viewModel.getMovies(page: 1)
             }
         }
     }

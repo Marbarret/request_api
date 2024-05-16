@@ -12,12 +12,12 @@
 		B65DD5B32BF5251400450E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65DD5B22BF5251400450E17 /* Assets.xcassets */; };
 		B65DD5B72BF5251400450E17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65DD5B62BF5251400450E17 /* Preview Assets.xcassets */; };
 		B65DD5BE2BF5255200450E17 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5BD2BF5255200450E17 /* NetworkService.swift */; };
-		B65DD5C12BF5259900450E17 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5C02BF5259900450E17 /* ApiService.swift */; };
 		B65DD5C32BF525EF00450E17 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5C22BF525EF00450E17 /* ViewModel.swift */; };
 		B65DD5C52BF5289D00450E17 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5C42BF5289D00450E17 /* Endpoint.swift */; };
 		B65DD5C82BF531F500450E17 /* ModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5C72BF531F500450E17 /* ModelResponse.swift */; };
 		B65DD5CA2BF5364D00450E17 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5C92BF5364D00450E17 /* APIManager.swift */; };
 		B65DD5CC2BF53D5F00450E17 /* RowRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5CB2BF53D5F00450E17 /* RowRequest.swift */; };
+		B65DD5CE2BF5479600450E17 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5CD2BF5479600450E17 /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +28,13 @@
 		B65DD5B42BF5251400450E17 /* resquest_api.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = resquest_api.entitlements; sourceTree = "<group>"; };
 		B65DD5B62BF5251400450E17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B65DD5BD2BF5255200450E17 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		B65DD5C02BF5259900450E17 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		B65DD5C22BF525EF00450E17 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B65DD5C42BF5289D00450E17 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B65DD5C72BF531F500450E17 /* ModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelResponse.swift; sourceTree = "<group>"; };
 		B65DD5C92BF5364D00450E17 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B65DD5CB2BF53D5F00450E17 /* RowRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowRequest.swift; sourceTree = "<group>"; };
+		B65DD5CD2BF5479600450E17 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		B65DD5D02BF549B400450E17 /* jsonResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jsonResult.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 			children = (
 				B65DD5BF2BF5258B00450E17 /* Protocol */,
 				B65DD5BD2BF5255200450E17 /* NetworkService.swift */,
+				B65DD5D02BF549B400450E17 /* jsonResult.json */,
 				B65DD5C42BF5289D00450E17 /* Endpoint.swift */,
 				B65DD5C92BF5364D00450E17 /* APIManager.swift */,
 				B65DD5C22BF525EF00450E17 /* ViewModel.swift */,
@@ -93,7 +95,6 @@
 		B65DD5BF2BF5258B00450E17 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B65DD5C02BF5259900450E17 /* ApiService.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -102,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B65DD5C72BF531F500450E17 /* ModelResponse.swift */,
+				B65DD5CD2BF5479600450E17 /* MovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,10 +180,10 @@
 			files = (
 				B65DD5CA2BF5364D00450E17 /* APIManager.swift in Sources */,
 				B65DD5C32BF525EF00450E17 /* ViewModel.swift in Sources */,
+				B65DD5CE2BF5479600450E17 /* MovieModel.swift in Sources */,
 				B65DD5B12BF5250B00450E17 /* ContentView.swift in Sources */,
 				B65DD5BE2BF5255200450E17 /* NetworkService.swift in Sources */,
 				B65DD5CC2BF53D5F00450E17 /* RowRequest.swift in Sources */,
-				B65DD5C12BF5259900450E17 /* ApiService.swift in Sources */,
 				B65DD5C52BF5289D00450E17 /* Endpoint.swift in Sources */,
 				B65DD5AF2BF5250B00450E17 /* resquest_apiApp.swift in Sources */,
 				B65DD5C82BF531F500450E17 /* ModelResponse.swift in Sources */,

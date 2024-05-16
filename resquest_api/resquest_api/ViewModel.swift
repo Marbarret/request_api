@@ -11,11 +11,10 @@ class ViewModel: ObservableObject {
         self.movieService = movieService
     }
     
-    func fetchMovies() async {
-        isLoading = true
-        defer { isLoading = false }
+    @MainActor
+    func getMovies(page: Int) async {
         do {
-            movies = try await movieService.getRatedMovie()
+            movies = try await movieService.fetchData(page: page)
         } catch {
             print(error.localizedDescription)
         }
