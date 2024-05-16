@@ -13,8 +13,8 @@ struct resquest_apiApp: App {
     private var service: NetworkService
     
     init() {
-        self.service = NetworkService(apiManager: APIManager.topRated)
-        self.viewModel = ViewModel(movieService: service)
+        self.service = NetworkService(apiManager: APIManager.endPointRequest)
+        self.viewModel = ViewModel(networkService: service)
     }
     var body: some Scene {
         WindowGroup {

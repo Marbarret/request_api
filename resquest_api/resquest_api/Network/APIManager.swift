@@ -1,39 +1,35 @@
 import Foundation
 
 enum APIManager {
-    case topRated
-    
-    public init(topRatedMovies: Void) {
-        self = .topRated
-    }
+    case endPointRequest //endpoint da api
 }
 
 extension APIManager {
     var accessToken: String {
-        return "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjQ5NGQ4NGVmZWZlMzYyNmM0OGQzODUyMDZmMWI4MSIsInN1YiI6IjYxOTE2YjJlOTU3ZTZkMDA2MGFiODYzMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3_BxuihJCbVZwsebANM0WeGoiyy8rD4JCJDSt6RIa34"
+        return ""
     }
     
     var baseUrl: String {
-        return "https://api.themoviedb.org/3/"
+        return "https://rickandmortyapi.com/api"
     }
     
     var path: String {
         switch self {
-        case .topRated:
-            return "movie/popular"
+        case .endPointRequest:
+            return "/character"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .topRated:
+        case .endPointRequest:
             return .get
         }
     }
     
     var header: [String: String]? {
         switch self {
-        case .topRated:
+        case .endPointRequest:
             return [
                 "Authorization": "Bearer \(accessToken)",
                 "Content-Type": "application/json;charset=utf-8"

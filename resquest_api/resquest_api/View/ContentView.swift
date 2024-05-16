@@ -11,12 +11,12 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
     
     var body: some View {
-        List(viewModel.movies) { movie in
-            RowRequest(movie: movie)
+        List(viewModel.movies) { data in
+            RowRequest(datum: data)
         }
         .onAppear {
             Task {
-                await viewModel.getMovies(page: 1)
+                await viewModel.getData(page: 19)
             }
         }
     }

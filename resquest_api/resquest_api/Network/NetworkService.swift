@@ -1,5 +1,5 @@
 import Foundation
-import Combine
+import UIKit
 
 class NetworkService {
     
@@ -11,16 +11,8 @@ class NetworkService {
         self.apiManager = apiManager
     }
     
-    func fetchData(page: Int) async throws -> [MovieModel] {
-        var urlComponents = URLComponents(string: apiManager.baseUrl + apiManager.path)!
-        
-        urlComponents.queryItems = [
-          URLQueryItem(name: "language", value: "en-US"),
-          URLQueryItem(name: "page", value: String(page)),
-          URLQueryItem(name: "sort_by", value: "created_at.asc"),
-        ]
-        
-        guard let url = urlComponents.url else {
+    func fetchData(page: Int) async throws -> [DatumModel] {
+        guard let url = URL(string: apiManager.baseUrl + apiManager.path) else {
             throw NetworkError.invalidURL
         }
         
@@ -37,25 +29,5 @@ class NetworkService {
         let decoder = JSONDecoder()
         let dataResult = try decoder.decode(ModelResponse.self, from: data)
         return dataResult.results
-    }
-}
-
-enum NetworkError: Error {
-    case decode
-    case invalidURL
-    case noResponse
-    case unauthorized
-    case unexpectedStatusCode
-    case unknown
-    
-    var customMessage: String {
-        switch self {
-        case .decode:
-            return "Decode error"
-        case .unauthorized:
-            return "Session expired"
-        default:
-            return "Unknown error"
-        }
     }
 }
