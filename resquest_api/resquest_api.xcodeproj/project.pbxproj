@@ -22,6 +22,7 @@
 		B6FD2F692BF6C36E0078594E /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD2F682BF6C36D0078594E /* ImageModifier.swift */; };
 		B6FD2F6D2BF6C7270078594E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD2F6C2BF6C7270078594E /* NetworkError.swift */; };
 		B6FD2F722BF6C7B20078594E /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD2F712BF6C7B20078594E /* JSONNull.swift */; };
+		B6FD2F752BF702A80078594E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD2F742BF702A80078594E /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B6FD2F682BF6C36D0078594E /* ImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
 		B6FD2F6C2BF6C7270078594E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B6FD2F712BF6C7B20078594E /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
+		B6FD2F742BF702A80078594E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		B6FD2F612BF690D40078594E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B6FD2F732BF7029C0078594E /* Model */,
 				B65DD5CB2BF53D5F00450E17 /* RowRequest.swift */,
 				B65DD5B02BF5250B00450E17 /* ContentView.swift */,
 			);
@@ -180,6 +183,14 @@
 				B6FD2F6C2BF6C7270078594E /* NetworkError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		B6FD2F732BF7029C0078594E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6FD2F742BF702A80078594E /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				B65DD5CA2BF5364D00450E17 /* APIManager.swift in Sources */,
 				B65DD5C32BF525EF00450E17 /* ViewModel.swift in Sources */,
 				B65DD5CE2BF5479600450E17 /* DatumModel.swift in Sources */,
+				B6FD2F752BF702A80078594E /* Item.swift in Sources */,
 				B65DD5B12BF5250B00450E17 /* ContentView.swift in Sources */,
 				B6FD2F672BF6B8BC0078594E /* Extension+View.swift in Sources */,
 				B65DD5BE2BF5255200450E17 /* NetworkService.swift in Sources */,

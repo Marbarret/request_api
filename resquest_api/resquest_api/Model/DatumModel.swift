@@ -12,7 +12,7 @@ struct DatumModel: Codable, Identifiable {
     let episode: [String]
     let url: String
     let created: String
-    
+
     init(id: Int, name: String, status: Status, species: Species, type: String, gender: Gender, origin: Location, location: Location, image: String, episode: [String], url: String, created: String) {
         self.id = id
         self.name = name

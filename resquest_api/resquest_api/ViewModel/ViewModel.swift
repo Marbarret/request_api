@@ -1,9 +1,10 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    @Published private(set) var movies: [DatumModel] = []
-    @Published private(set) var isLoading: Bool = false
-    @Published private(set) var error: Error?
+    @Published var data: [DatumModel] = []
+    @Published var isLoading: Bool = false
+    @Published var error: Error?
+    @Published var hasData: Bool = false
     
     private let networkService: NetworkService
     
@@ -13,9 +14,12 @@ class ViewModel: ObservableObject {
     
     @MainActor
     func getData(page: Int) async {
+        isLoading = true
         do {
-            movies = try await networkService.fetchData(page: page)
+            data = try await networkService.fetchData(page: page)
+            hasData = true
         } catch {
+            isLoading = false
             print(error.localizedDescription)
         }
     }

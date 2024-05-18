@@ -2,13 +2,9 @@ import SwiftUI
 
 struct ImageModifier: ViewModifier {
   var path: String?
-  var width: CGFloat
-  var height: CGFloat
 
-  init(path: String?, width: CGFloat, height: CGFloat) {
+  init(path: String?) {
     self.path = path
-    self.width = width
-    self.height = height
   }
     
     func body(content: Content) -> some View {
@@ -20,7 +16,6 @@ struct ImageModifier: ViewModifier {
                 image
                     .resizable()
                     .cornerRadius(10)
-                    .frame(width: self.width, height: self.height)
                     .scaledToFit()
             case .failure:
                 Text("No image")
