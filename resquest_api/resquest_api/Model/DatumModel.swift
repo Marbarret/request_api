@@ -9,11 +9,11 @@ struct DatumModel: Codable, Identifiable {
     let gender: Gender
     let origin, location: Location
     let image: String
-    let episode: [String]
+    var episode: [EpisodeModel]?
     let url: String
     let created: String
 
-    init(id: Int, name: String, status: Status, species: Species, type: String, gender: Gender, origin: Location, location: Location, image: String, episode: [String], url: String, created: String) {
+    init(id: Int, name: String, status: Status, species: Species, type: String, gender: Gender, origin: Location, location: Location, image: String, episode: [EpisodeModel]?, url: String, created: String) {
         self.id = id
         self.name = name
         self.status = status
