@@ -16,8 +16,9 @@
 		B65DD5C52BF5289D00450E17 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5C42BF5289D00450E17 /* HTTPMethod.swift */; };
 		B65DD5C82BF531F500450E17 /* ModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5C72BF531F500450E17 /* ModelResponse.swift */; };
 		B65DD5CA2BF5364D00450E17 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5C92BF5364D00450E17 /* APIManager.swift */; };
-		B65DD5CC2BF53D5F00450E17 /* RowRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5CB2BF53D5F00450E17 /* RowRequest.swift */; };
+		B65DD5CC2BF53D5F00450E17 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5CB2BF53D5F00450E17 /* DescriptionView.swift */; };
 		B65DD5CE2BF5479600450E17 /* DatumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DD5CD2BF5479600450E17 /* DatumModel.swift */; };
+		B6FAB70A2BF9942E006EC6D0 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FAB7092BF9942E006EC6D0 /* RoundedCorner.swift */; };
 		B6FD2F672BF6B8BC0078594E /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD2F662BF6B8BC0078594E /* Extension+View.swift */; };
 		B6FD2F692BF6C36E0078594E /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD2F682BF6C36D0078594E /* ImageModifier.swift */; };
 		B6FD2F6D2BF6C7270078594E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD2F6C2BF6C7270078594E /* NetworkError.swift */; };
@@ -37,8 +38,9 @@
 		B65DD5C42BF5289D00450E17 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B65DD5C72BF531F500450E17 /* ModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelResponse.swift; sourceTree = "<group>"; };
 		B65DD5C92BF5364D00450E17 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		B65DD5CB2BF53D5F00450E17 /* RowRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowRequest.swift; sourceTree = "<group>"; };
+		B65DD5CB2BF53D5F00450E17 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		B65DD5CD2BF5479600450E17 /* DatumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumModel.swift; sourceTree = "<group>"; };
+		B6FAB7092BF9942E006EC6D0 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		B6FD2F662BF6B8BC0078594E /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		B6FD2F682BF6C36D0078594E /* ImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
 		B6FD2F6C2BF6C7270078594E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -119,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B6FD2F732BF7029C0078594E /* Model */,
-				B65DD5CB2BF53D5F00450E17 /* RowRequest.swift */,
+				B65DD5CB2BF53D5F00450E17 /* DescriptionView.swift */,
 				B65DD5B02BF5250B00450E17 /* ContentView.swift */,
 			);
 			path = View;
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B6FD2F682BF6C36D0078594E /* ImageModifier.swift */,
+				B6FAB7092BF9942E006EC6D0 /* RoundedCorner.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -271,10 +274,11 @@
 				B65DD5B12BF5250B00450E17 /* ContentView.swift in Sources */,
 				B6FD2F672BF6B8BC0078594E /* Extension+View.swift in Sources */,
 				B65DD5BE2BF5255200450E17 /* NetworkService.swift in Sources */,
-				B65DD5CC2BF53D5F00450E17 /* RowRequest.swift in Sources */,
+				B65DD5CC2BF53D5F00450E17 /* DescriptionView.swift in Sources */,
 				B6FD2F692BF6C36E0078594E /* ImageModifier.swift in Sources */,
 				B65DD5C52BF5289D00450E17 /* HTTPMethod.swift in Sources */,
 				B6FD2F6D2BF6C7270078594E /* NetworkError.swift in Sources */,
+				B6FAB70A2BF9942E006EC6D0 /* RoundedCorner.swift in Sources */,
 				B65DD5AF2BF5250B00450E17 /* resquest_apiApp.swift in Sources */,
 				B65DD5C82BF531F500450E17 /* ModelResponse.swift in Sources */,
 			);

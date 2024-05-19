@@ -15,21 +15,41 @@ struct ContentView: View {
             ZStack(alignment: .center) {
                 ForEach(viewModel.data) { data in
                     let index = data.id
-                    ZStack(alignment: .topLeading) {
+                    ZStack(alignment: .bottom) {
+                        if index == activCardIndex {
+                            HStack {
+                                Text("Ver Episódios")
+                                    .foregroundColor(Color.black)
+                                    .padding()
+                                
+                                Spacer()
+                                Divider()
+                                    .padding(.vertical, 5)
+                                
+                                Image(systemName: "arrowtriangle.right.fill")
+                                    .foregroundColor(Color.black)
+                                    .padding(10)
+                            }
+                            .frame(width: 230, height: 50)
+                            .background(Color.white)
+                            .cornerRadius(8, corners: [.bottomLeft, .bottomRight])
+                            .offset(y: 50)
+                        }
+                        
                         Image("").setImage(image: data.image)
                             .scaledToFill()
                             .frame(width: screenWidth * widthScale, height: cardHeight)
                             .scaleEffect(x: cardScale(for: index), y: cardScale(for: index))
                             .clipped()
                         
-                        VStack(alignment: .leading, spacing: 10) {
-                              Text(data.name)
-                                .font(.title2)
-                                .foregroundColor(.white)
-                            }
-                            .padding(20)
-                            .background(Color.black.opacity(0.5))
+                        if index == activCardIndex {
+                            DescriptionView(data: data)
+                            .padding()
+                            .frame(width: screenWidth * widthScale, height: 90)
+                            .background(Color.white.opacity(0.7))
+                        }
                     }
+                    .offset(y: 100)
                     .shadow(radius: 12)
                     .offset(x: cardOffSet(for: index))
                     .scaleEffect(x: cardScale(for: index), y: cardScale(for: index))
@@ -58,7 +78,6 @@ struct ContentView: View {
                 .onAppear {
                     screenWidth = reader.size.width
                     cardHeight = screenWidth * widthScale * cardAspectRatio
-                    
                 }
                 .offset(x: 16, y: 30)
             }// ZStack
@@ -68,10 +87,11 @@ struct ContentView: View {
                 }
             }
         }//GeometryReader
-        .frame(height: 280)
-        
     }
-    
+}
+
+// Mark: Functions
+extension ContentView {
     func cardOffSet(for index: Int) -> CGFloat {
         let adjustedIndex = index - activCardIndex
         let cardSpacing: CGFloat = 60 / cardScale(for: index)
@@ -108,18 +128,5 @@ struct ContentView: View {
             return 1 - proportion * CGFloat(adjustedIndex) + (dragOffset < 0 ? proportion * progress : -proportion * progress)
         }
         return 1
-    }
-}
-
-
-struct CardView: View {
-    let data: DatumModel
-    let index: Int
-    
-    var body: some View {
-        VStack {
-            Text(data.name)
-            Text("Index: \(index)")
-        }
     }
 }
