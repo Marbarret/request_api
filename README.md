@@ -1,4 +1,4 @@
-# Request APP
+# API - Rick and Morty
 
 Este projeto serve como estudo e base generica para integrações com APIs.
 
